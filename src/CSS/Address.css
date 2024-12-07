@@ -1,0 +1,66 @@
+.reservation-container,
+.add-container,
+.navigation-container {
+    width: 33%;
+    height: auto;
+    background-color: transparent;
+    padding: .5em 0;
+}
+
+
+
+.reservation-container>h2,
+.add-container>h2,
+.navigation-container>h2 {
+    font-family: var(--font);
+    text-transform: capitalize;
+    color: var(--white);
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.reservation-container>p,
+.add-container>p {
+    color: #BABABA;
+    font-family: var(--font);
+    line-height: 30px;
+    position: relative;
+    font-weight: 300;
+    /* max-width: 60%; */
+}
+
+.add-container p:last-child {
+    cursor: pointer;
+    text-transform: capitalize;
+    margin-top: 20px;
+}
+
+.add-container p:last-child::after {
+    content: '';
+    position: absolute;
+    bottom: -20%;
+    left: 0%;
+    height: 1.5px;
+    width: 100px;
+    background-color: rgba(0, 0, 0, .5);
+    transition: var(--transition_two);
+}
+
+.add-container p:last-child:hover::after {
+    background-color: var(--ligth_blue);
+}
+
+p:last-child:hover {
+    color: var(--ligth_blue);
+}
+
+@media (max-width: 772px) {
+
+    .reservation-container,
+    .add-container,
+    .navigation-container {
+        padding: .5em 0;
+        width: 100%;
+    }
+
+}

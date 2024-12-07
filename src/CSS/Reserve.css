@@ -1,0 +1,68 @@
+.reserve-container {
+    width: 70%;
+    height: auto;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em 3em;
+    margin: 5em auto;
+    border: 1px solid var(--gray);
+}
+
+.reserve-container h2,
+.reserve-container a {
+    text-decoration: none;
+    font-family: var(--font);
+    text-transform: capitalize;
+}
+
+.reserve-container a{
+    cursor: pointer;
+}
+
+.reserve-container h2 {
+    font-weight: 300;
+    font-size: 2em;
+}
+
+.reserve-container a button {
+    background-color: var(--ligth_blue);
+    border: none;
+    outline: none;
+    padding: .5em 2em;
+    font-size: 1em;
+    border-radius: 100px;
+    font-family: "Playwrite HR Lijeva", cursive;
+    transition: var(--transition_two);
+    border: 1px solid rgba(108, 117, 125, .1);
+    color: var(--white);
+}
+
+.reserve-container a button:hover {
+    background-color: transparent;
+    color: var(--ligth_blue);
+    border: 1px solid var(--ligth_blue);
+}
+
+@media (max-width: 981px) {
+    .reserve-container h2 {
+        font-weight: 300;
+        font-size: 1em;
+    }
+    
+    .reserve-container a button {
+        font-size: .7em;
+    }
+}
+
+@media (max-width: 761px) {
+    .reserve-container {
+        flex-direction: column;
+        gap: 20px;
+        width: 90%;
+        padding: 1em;
+        margin-top: 1em;
+        margin-bottom: 1.9em;
+    }
+}

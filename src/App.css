@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --font-family: "Roboto", serif;
+  --blue: #007bff;
+  --gray: #6c757d;
+  --white: #fff;
+  --transition_two: .3s ease-in-out;
+  --transition: 1s ease-in-out;
+  --font: "Roboto", serif;
+  --black: #000;
+  --ligth_blue: #009DFF;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}

@@ -1,0 +1,160 @@
+.form-container {
+    width: 100%;
+    height: auto;
+    padding: 3em 7em;
+}
+
+.form-container h2 {
+    font-family: var(--font);
+    font-weight: 400;
+    margin: 2em 0;
+}
+
+.form-container .form {
+    width: 100%;
+    height: auto;
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.form-container .form form {
+    width: 60%;
+    height: auto;
+}
+
+.form-container .form form textarea::placeholder,
+.form-container .form form input::placeholder {
+    font-family: var(--font);
+    color: #495057;
+    font-size: 1.1em;
+    font-weight: 300;
+    outline: none;
+}
+
+.form-container .form form textarea,
+.form-container .form form input {
+    padding: 1.5em;
+    border: 1px solid rgba(73, 80, 87, .4);
+    margin-bottom: 1.5em;
+    outline: none;
+    border-radius: 5px;
+    font-family: var(--font);
+    /* text-transform: capitalize; */
+    /* color: rgba(73, 80, 87, .4); */
+    color: var(--ligth_blue)
+}
+
+.form-container .form form .div {
+    width: 100%;
+    height: auto;
+    /* background: aqua; */
+    display: flex;
+    gap: 20px;
+}
+
+.form-container .form form .div input {
+    width: 50%;
+}
+
+.form-container .form form textarea {
+    resize: none;
+    width: 100%;
+    height: 30vh;
+}
+
+.form-container .form form input {
+    width: 100%;
+}
+
+.form-container .form button {
+    margin: 0 auto;
+    background-color: transparent;
+    outline: none;
+    border: 1px var(--ligth_blue) solid;
+    padding: 1.2em 3.5em;
+    font-family: var(--font);
+    color: var(--ligth_blue);
+    text-transform: uppercase;
+    font-size: 1.1em;
+    font-weight: 300;
+    letter-spacing: 5px;
+    display: flex;
+    justify-self: center;
+    transition: var(--transition_two);
+    border-radius: 5px;
+}
+
+.form-container .form button:hover {
+    background-color: var(--ligth_blue);
+    color: var(--white);
+}
+
+.form-container .form .icons {
+    width: 30%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.form-container .form .icons [class^="icon-"] {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.form-container .form .icons [class^="icon-"] svg {
+    font-size: 1.3em;
+    color: rgba(73, 80, 87, .4);
+}
+
+.form-container .form .icons [class^="icon-"] span {
+    width: 100%;
+    height: auto;
+}
+
+.form-container .form .icons [class^="icon-"] span p:first-child,
+.form-container .form .icons [class^="icon-"] span p:last-child {
+    text-transform: capitalize;
+    font-family: var(--font);
+}
+
+.form-container .form .icons [class^="icon-"] span p:first-child {
+    font-weight: 400;
+}
+
+.form-container .form .icons [class^="icon-"] span p:last-child {
+    font-weight: 300;
+    color: rgba(73, 80, 87, .4);
+    margin-top: 5px;
+}
+
+@media (max-width: 1082px) {
+    .form-container {
+        padding: 1em;
+    }
+}
+
+@media (max-width: 856px) {
+    .form-container {
+        padding: .5em;
+    }
+    .form-container .form {
+        flex-wrap: wrap;
+    }
+
+    .form-container .form form {
+        width: 100%;
+    }
+
+    .form-container .form .icons {
+        width: 100%;
+    }
+    
+    .form-container .form button {
+        padding: .5em 1em;
+    }
+}

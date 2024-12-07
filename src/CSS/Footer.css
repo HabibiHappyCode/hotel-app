@@ -1,0 +1,29 @@
+.footer-container {
+    width: 100%;
+    height: auto;
+    background-color: var(--black);
+    padding: 7em 5em 0;
+}
+
+.footer-container .box {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 822px) {
+    .footer-container {
+        padding: 3em;
+    }
+}
+
+@media (max-width: 772px) {
+    .footer-container {
+        padding: 2em 1em 0;
+    }
+
+    .footer-container .box {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+}

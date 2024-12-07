@@ -1,0 +1,111 @@
+.second-container {
+    width: 100%;
+    height: auto;
+    /* background-color: red; */
+    padding: 9em 7em;
+    display: flex;
+    justify-content: space-between;
+    transition: var(--transition_two);
+}
+
+.second-container .first {
+    width: 45%;
+    height: auto;
+    /* background-color: yellow; */
+}
+
+.second-container .first p:nth-child(1) {
+    font-size: 15px;
+    color: var(--ligth_blue)
+}
+
+.second-container .first h1 {
+    font-family: var(--font);
+    font-weight: 300;
+    font-size: 3em;
+    margin: .2em 0;
+}
+
+.second-container .first p:nth-child(3) {
+    font-family: var(--font);
+    font-weight: 200;
+    word-spacing: 3px;
+    line-height: 25px;
+    margin: .8em 0;
+}
+
+.second-container .first p:last-child {
+    color: rgba(0, 0, 0, .5);
+    cursor: pointer;
+    position: relative;
+    /* width: 20%; */
+    transition: var(--transition_two);
+    margin-top: 2em;
+}
+
+.second-container .first p:last-child:hover {
+    color: var(--ligth_blue);
+}
+
+.second-container .first p:last-child::after {
+    content: '';
+    position: absolute;
+    bottom: -20%;
+    left: 0%;
+    height: 1.5px;
+    width: 100px;
+    background-color: rgba(0, 0, 0, .5);
+    transition: var(--transition_two);
+}
+
+.second-container .first p:last-child:hover::after {
+    background-color: var(--ligth_blue);
+}
+
+.second-container .second {
+    width: 50%;
+    height: auto;
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.second-container .second img {
+    width: 50%;
+    height: 90%;
+    object-fit: fill;
+}
+
+.second-container .second img:last-child {
+    margin-top: 40px;
+}
+
+@media (max-width: 983px) {
+    .second-container {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .second-container .first {
+        width: 100%;
+    }
+
+    .second-container .second {
+        width: 100%;
+    }
+
+    .second-container .first h1 {
+    font-size: 1.5em;
+}
+}
+
+@media (max-width: 760px) {
+    .second-container {
+        padding: 1.2em;
+    }
+
+    .second-container .second {
+        margin-top: 20px;
+    }
+}

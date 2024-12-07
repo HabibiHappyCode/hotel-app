@@ -1,0 +1,52 @@
+.page-container {
+    width: 100%;
+    height: 40em;
+    position: relative;
+    margin-bottom: 2em;
+}
+
+.page-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.page-container .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-container .content h1 {
+    color: var(--white);
+    font-family: var(--font);
+    text-transform: capitalize;
+    font-size: 6em;
+    font-weight: 300;
+    transition: var(--transition);
+}
+
+@media (max-width: 1191px) {
+    .page-container .content h1 {
+        font-size: 4em;
+    }
+}
+
+@media (max-width: 566px) {
+    .page-container .content h1{
+        font-size: 2em;
+        letter-spacing: 4px;
+    }
+}
+
+@media (max-width: 808px) {
+    .page-container {
+        height: 30em;
+    }
+}
