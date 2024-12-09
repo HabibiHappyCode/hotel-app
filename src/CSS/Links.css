@@ -111,8 +111,10 @@
 }
 
 .fixed {
-    position: fixed;
+    position: sticky;
     top: 0%;
+    left: 0%;
+    /* width: 1; */
     background-color: black;
     transition: all .3s ease-in;
     border-bottom: var(--white) 1px solid;
