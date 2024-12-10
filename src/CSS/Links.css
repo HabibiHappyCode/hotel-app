@@ -11,7 +11,7 @@
     right: 0;
     bottom: 0;
     z-index: 1000;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 
@@ -115,7 +115,7 @@
     position: sticky;
     top: 0%;
     left: 0%;
-    overflow: hidden;
+    /* overflow: hidden; */
     background-color: black;
     transition: all .3s ease-in;
     border-bottom: var(--white) 1px solid;
