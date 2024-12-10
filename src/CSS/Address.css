@@ -5,6 +5,7 @@
     height: auto;
     background-color: transparent;
     padding: .5em 0;
+    overflow: hidden;
 }
 
 

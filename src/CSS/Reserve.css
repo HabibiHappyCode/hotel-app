@@ -8,6 +8,7 @@
     padding: 2em 3em;
     margin: 5em auto;
     border: 1px solid var(--gray);
+    overflow: hidden;
 }
 
 .reserve-container h2,

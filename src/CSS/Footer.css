@@ -3,6 +3,7 @@
     height: auto;
     background-color: var(--black);
     padding: 7em 5em 0;
+    overflow: hidden;
 }
 
 .footer-container .box {

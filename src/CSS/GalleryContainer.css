@@ -1,6 +1,7 @@
 .gallery-container {
     width: 100%;
     height: auto;
+    overflow: hidden;
     /* background-color: red; */
 }
 

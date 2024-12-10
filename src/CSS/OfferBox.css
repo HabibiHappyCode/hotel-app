@@ -1,6 +1,7 @@
 .offerBox-container {
     width: 33%;
     height: auto;
+    overflow: hidden;
     /* background-color: yellow; */
 }
 
