@@ -7,26 +7,20 @@ import { faEnvelope, faHouse, faTablet } from '@fortawesome/free-solid-svg-icons
 
 function Form() {
 
+    const [formValue, setFormValue] = useState({
+        textArea: '',
+        nameValue: '',
+        emailValue: '',
+        subjectValue: ''
+    })
 
-    const [textarea, setTextarea] = useState('')
-    const [name, setName] = useState('')
-    const [email, setEmail] = useState('')
-    const [subject, setSubject] = useState('')
-
-    const changeTextHandler = (e) => {
-        setTextarea(e.target.value)
-    }
-
-    const changeNameHandler = (e) => {
-        setName(e.target.value)
-    }
-
-    const changeEmailHandler = (e) => {
-        setEmail(e.target.value)
-    }
-
-    const changeSubjectHandler = (e) => {
-        setSubject(e.target.value)
+    const handleOnChange = (inputIdentifier, newValue) => {
+        setFormValue(prevFormValue => {
+            return {
+                ...prevFormValue,
+                [inputIdentifier]: newValue
+            }
+        })
     }
 
     return (
@@ -39,15 +33,39 @@ function Form() {
             <div className="form">
 
 
-                <form  action="https://getform.io/f/933bb9c0-7fe0-4a56-afa5-6d4ce90fcb5d" method="POST">
-                    <textarea name="text" placeholder='Text.....' required value={textarea} onChange={changeTextHandler}></textarea>
+                <form action="https://getform.io/f/933bb9c0-7fe0-4a56-afa5-6d4ce90fcb5d" method="POST">
+                    <textarea name="text"
+                        placeholder='Text.....'
+                        required
+                        value={formValue.textArea}
+                        onChange={(event) => handleOnChange('textArea', event.target.value)}>
+                    </textarea>
 
                     <div className="div">
-                        <input type="text" placeholder='Enter your name' required value={name} onChange={changeNameHandler} />
-                        <input type="email" placeholder='Email' required value={email} onChange={changeEmailHandler} />
+                        <input
+                            type="text"
+                            placeholder='Enter your name'
+                            required
+                            value={formValue.nameValue}
+                            onChange={(event) => handleOnChange('nameValue', event.target.value
+                            )} />
+
+                        <input
+                            type="email"
+                            placeholder='Email'
+                            required
+                            value={formValue.emailValue}
+                            onChange={(event) => handleOnChange('emailValue', event.target.value
+                            )} />
+
                     </div>
 
-                    <input type="text" placeholder='Enter Subject' required value={subject} onChange={changeSubjectHandler} />
+                    <input
+                        type="text"
+                        placeholder='Enter Subject'
+                        required
+                        value={formValue.subjectValue} onChange={(event) => handleOnChange('subjectValue', event.target.value
+                        )} />
 
                     <button type='submit' onSubmit={(e) => {
                         e.preventDefault()
